@@ -32,7 +32,7 @@ export default {
     Item
   },
   methods: {
-    ...mapActions([
+    ...mapActions('todoItem', [
       types.ADD_TASK
     ]),
     addTask: function(){

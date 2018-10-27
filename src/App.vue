@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
 import TodoList from './components/TodoList';
 
 export default {
@@ -18,7 +18,10 @@ export default {
     }
   },
   computed: {
-    ...mapState(['items'])
+    ...mapGetters('todoItem', {
+      // map `this.items` with `this.$store.state.getter.itemList`
+      items: 'itemList'
+    })
   }
 }
 </script>

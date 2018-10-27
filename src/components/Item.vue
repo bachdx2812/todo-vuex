@@ -14,7 +14,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
+    ...mapActions('todoItem', [
       types.DONE_TASK
     ])
   }
